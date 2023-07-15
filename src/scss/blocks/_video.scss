@@ -1,0 +1,126 @@
+.video {
+    background: url('../images/video-bg-1.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    &__inner {
+        padding: 140px 0 210px;
+    }
+
+    &__info {
+        max-width: 1050px;
+
+        margin: 0 auto 70px;
+
+        font-weight: 700;
+        font-size: 42px;
+        line-height: 50px;
+
+        color: $color-white;
+        text-align: center;
+    }
+
+    &__player {
+        position: relative;
+
+        margin: 0 auto 125px;
+
+        max-width: 1050px;
+        max-height: 600px;
+
+        overflow: hidden;
+    }
+
+    &__player-img {
+        object-fit: cover;
+    }
+
+    &__play-button {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+
+        transform: translate(-50%, -50%);
+
+        width: 100px;
+        height: 100px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        background: $color-action;
+        border: none;
+        border-radius: 50%;
+
+        cursor: pointer;
+
+        transition: background 0.2s ease-in-out;
+
+        svg path {
+            fill: $color-white;
+
+            transition: fill 0.2s ease-in-out;
+        }
+
+        &:hover {
+            background: darken($color-action, 4%);
+
+            svg path {
+                fill: darken($color-white, 4%);
+            }
+        }
+    }
+
+    &__previews {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        gap: 70px;
+    }
+
+    &__preview-item {
+        display: flex;
+    }
+
+    &__preview-img {
+        margin-right: 40px;
+
+        flex-shrink: 0;
+
+        width: 250px;
+        height: 150px;
+        object-fit: cover;
+        object-position: center;
+    }
+
+    &__preview-info {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__preview-title {
+        margin-bottom: 15px;
+
+        max-width: 300px;
+
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 1.5;
+
+        color: $color-white;
+    }
+
+    &__preview-description {
+        min-width: 330px;
+
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 28px;
+        letter-spacing: 0.5px;
+
+        color: rgba($color-white, 0.7);
+    }
+}

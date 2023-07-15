@@ -1,0 +1,90 @@
+.header {
+    margin-bottom: 100px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &__logo {
+        margin-right: 100px;
+        width: 170px;
+        height: 70px;
+    }
+
+    &__menu {
+        margin-right: auto;
+    }
+
+    &__menu-list {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        gap: 60px;
+    }
+
+    &__menu-item {
+        font-weight: 700px;
+        fontsize: 18px;
+        line-height: normal;
+
+        color: $color-white;
+
+        text-transform: uppercase;
+
+        transition: color 0.2s ease-in-out;
+
+        &:hover {
+            color: $color-red;
+        }
+    }
+
+    &__controls {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 40px;
+    }
+
+    &__controls-button {
+        border: none;
+        background: transparent;
+
+        cursor: pointer;
+    }
+
+    &__controls-icon {
+        width: 24px;
+        height: 24px;
+    }
+
+    &__search-icon {
+        g path,
+        defs clipPath rect {
+            fill: $color-white;
+            transition: fill 0.2s ease-in-out;
+        }
+
+        &:hover {
+            g path,
+            defs clipPath rect {
+                fill: $color-red;
+            }
+        }
+    }
+
+    &__menu-icon {
+        g path,
+        defs clipPath rect {
+            fill: $color-white;
+            transition: fill 0.2s ease-in-out;
+        }
+
+        &:hover {
+            g path,
+            defs clipPath rect {
+                fill: $color-red;
+            }
+        }
+    }
+}
