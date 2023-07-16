@@ -42,3 +42,31 @@
         background: darken($color-red, 4%);
     }
 }
+
+@media (max-width: 1080px) {
+    .button {
+        &__up {
+            width: 80px;
+            height: 80px;
+
+            svg {
+                width: 35px;
+                height: 19px;
+            }
+        }
+    }
+}
+
+@media (max-width: 520px) {
+    .button {
+        &__up {
+            width: 60px;
+            height: 60px;
+
+            svg {
+                width: 30px;
+                height: 14px;
+            }
+        }
+    }
+}

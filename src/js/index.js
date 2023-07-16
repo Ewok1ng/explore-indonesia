@@ -37,9 +37,7 @@ document.body.addEventListener('click', (e) => {
 
     if (!e.target.closest('.hero__menu')) {
         if (menu.classList.contains('hero__menu--active')) {
-            console.log('menu contains active');
             menu.classList.remove('hero__menu--active');
-            console.log('removed');
         }
     }
 });
@@ -59,7 +57,6 @@ searchButton.addEventListener('click', () => {
         searchInput.classList.add('header__search-input--active');
         searchInput.focus();
     } else if (searchInput.value === '') {
-        console.log(searchInput);
         searchInput.classList.remove('header__search-input--active');
     }
 });
@@ -67,4 +64,25 @@ searchButton.addEventListener('click', () => {
 scrollButton.addEventListener('click', () => {
     document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;
+});
+
+const stepsDescriptions = document.querySelectorAll('.steps__item-description');
+
+stepsDescriptions.forEach((item) => {
+    item.addEventListener('click', (e) => {
+        if (e.target.closest('.steps__show-more')) {
+            const showMore = item.lastElementChild;
+
+            if (!showMore.classList.contains('steps__show-more--active')) {
+                item.classList.add('steps__item-description--active');
+
+                showMore.classList.add('steps__show-more--active');
+                showMore.textContent = 'Show less';
+            } else {
+                item.classList.remove('steps__item-description--active');
+                showMore.classList.remove('steps__show-more--active');
+                showMore.textContent = 'Show more';
+            }
+        }
+    });
 });
