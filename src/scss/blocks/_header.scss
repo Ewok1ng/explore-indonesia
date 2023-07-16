@@ -46,45 +46,101 @@
         gap: 40px;
     }
 
+    &__search {
+        position: relative;
+    }
+
+    &__search-input {
+        padding: 8px 32px 8px 12px;
+
+        width: 0%;
+        display: none;
+
+        font-size: 18px;
+        line-height: 1;
+
+        color: $color-white;
+        background: transparent;
+        border: 2px solid $color-white;
+        border-radius: 20px;
+
+        transition: all 0.2s ease-in-out;
+
+        &:focus {
+            outline: none;
+        }
+
+        &:active,
+        &:focus {
+            border-color: $color-red;
+        }
+
+        &--active {
+            padding: 8px 34px 8px 12px;
+            max-width: 250px;
+            width: 100%;
+
+            display: inline-block;
+            transition: all 0.2s ease-in-out;
+        }
+    }
+
     &__controls-button {
         border: none;
         background: transparent;
 
         cursor: pointer;
+
+        &--menu {
+            .header__menu-icon {
+                g path,
+                defs clipPath rect {
+                    fill: $color-white;
+                    transition: fill 0.2s ease-in-out;
+                }
+            }
+
+            &:hover {
+                .header__menu-icon {
+                    g path,
+                    defs clipPath rect {
+                        fill: $color-red;
+                    }
+                }
+            }
+        }
+
+        &--search {
+            position: absolute;
+            top: 50%;
+            right: 10px;
+            transform: translateY(-50%);
+
+            padding: 0;
+            width: 24px;
+            height: 24px;
+
+            .header__search-icon {
+                g path,
+                defs clipPath rect {
+                    fill: $color-white;
+                    transition: fill 0.2s ease-in-out;
+                }
+            }
+
+            &:hover {
+                .header__search-icon {
+                    g path,
+                    defs clipPath rect {
+                        fill: $color-red;
+                    }
+                }
+            }
+        }
     }
 
     &__controls-icon {
         width: 24px;
         height: 24px;
-    }
-
-    &__search-icon {
-        g path,
-        defs clipPath rect {
-            fill: $color-white;
-            transition: fill 0.2s ease-in-out;
-        }
-
-        &:hover {
-            g path,
-            defs clipPath rect {
-                fill: $color-red;
-            }
-        }
-    }
-
-    &__menu-icon {
-        g path,
-        defs clipPath rect {
-            fill: $color-white;
-            transition: fill 0.2s ease-in-out;
-        }
-
-        &:hover {
-            g path,
-            defs clipPath rect {
-                fill: $color-red;
-            }
-        }
     }
 }
