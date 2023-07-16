@@ -19,6 +19,25 @@
     transition: background 0.2s ease-in-out;
     cursor: pointer;
 
+    &__up {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+
+        z-index: 100;
+
+        width: 100px;
+        height: 100px;
+
+        display: none;
+
+        border-radius: 50%;
+
+        svg path {
+            fill: $color-white;
+        }
+    }
+
     &:hover {
         background: darken($color-red, 4%);
     }
