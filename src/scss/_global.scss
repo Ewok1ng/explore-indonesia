@@ -94,3 +94,10 @@ body {
 
     color: $color-blue;
 }
+
+@media (max-width: 520px) {
+    .section__title {
+        font-size: 40px;
+        line-height: 46px;
+    }
+}
