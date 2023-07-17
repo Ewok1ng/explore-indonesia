@@ -1,5 +1,6 @@
 import { heroSlider } from './modules/heroSlider';
 import { exploreSlider } from './modules/exploreSlider';
+import { fancybox } from './modules/fancybox';
 
 // search controls
 const searchButton = document.getElementById('search-button');
@@ -18,6 +19,9 @@ heroSlider();
 
 // section explore-numbers slider
 exploreSlider();
+
+// fancybox gallery
+fancybox();
 
 window.addEventListener('scroll', (e) => {
     if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
