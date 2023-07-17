@@ -39,6 +39,7 @@
     "yargs": "^17.2.1"
   },
   "dependencies": {
+    "@fancyapps/ui": "^5.0.20",
     "swiper": "^10.0.4"
   }
 }
