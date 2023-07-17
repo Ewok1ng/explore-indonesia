@@ -5,9 +5,15 @@
 
     &::after,
     &::before {
-        content: url('../images/map-particles.svg');
+        content: '';
 
         position: absolute;
+
+        width: 1393px;
+        height: 1670px;
+
+        background: url('../images/map-particles.svg');
+        background-size: cover;
     }
 
     &::after {
@@ -52,5 +58,141 @@
         letter-spacing: 0.5px;
 
         color: $color-paragraph-dark;
+    }
+}
+
+@media (max-width: 1780px) {
+    .map {
+        &::before {
+            top: -120%;
+            left: -50%;
+        }
+
+        &::after {
+            bottom: -145%;
+            right: -40%;
+        }
+    }
+}
+
+@media (max-width: 1540px) {
+    .map {
+        &::before,
+        &::after {
+            width: 900px;
+            height: 1080px;
+        }
+
+        &::before {
+            top: -75%;
+            left: -30%;
+        }
+
+        &::after {
+            bottom: -90%;
+            right: -20%;
+        }
+    }
+}
+
+@media (max-width: 1360px) {
+    .map {
+        &::before {
+            top: -90%;
+        }
+    }
+}
+
+@media (max-width: 1080px) {
+    .map {
+        &::before {
+            top: -90%;
+            left: -20%;
+            transform: rotate(60deg);
+        }
+
+        &::after {
+            bottom: -100%;
+            right: -20%;
+        }
+    }
+}
+
+@media (max-width: 900px) {
+    .map {
+        &::before,
+        &::after {
+            width: 720px;
+            height: 864px;
+        }
+
+        &::before {
+            top: -75%;
+            left: -20%;
+        }
+
+        &::after {
+            bottom: -80%;
+            right: -20%;
+        }
+    }
+}
+
+@media (max-width: 520px) {
+    .map {
+        &::before {
+            top: -115%;
+            left: -35%;
+            transform: rotate(45deg);
+        }
+
+        &::after {
+            bottom: -115%;
+            right: -45%;
+        }
+
+        &__inner {
+            padding: 170px 0 120px;
+        }
+
+        &__title {
+            font-size: 40px;
+            line-height: 46px;
+        }
+
+        &__description {
+            font-size: 16px;
+            line-height: 24px;
+        }
+
+        &__button {
+            width: 100%;
+        }
+    }
+}
+
+@media (max-width: 440px) {
+    .map {
+        &::before {
+            top: -110%;
+            transform: rotate(50deg);
+        }
+
+        &::after {
+            bottom: -100%;
+            right: -80%;
+        }
+    }
+}
+
+@media (max-width: 400px) {
+    .map {
+        &::before {
+            top: -100%;
+        }
+
+        &::after {
+            bottom: -90%;
+        }
     }
 }

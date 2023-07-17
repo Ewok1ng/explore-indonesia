@@ -18,5 +18,19 @@ export function exploreSlider() {
         },
         slidesPerView: 3,
         spaceBetween: 30,
+        breakpoints: {
+            1080: {
+                slidesPerView: 3,
+                spaceBetween: 30,
+            },
+            720: {
+                slidesPerView: 2,
+                spaceBetween: 20,
+            },
+            320: {
+                slidesPerView: 1,
+                spaceBetween: 0,
+            },
+        },
     });
 }
